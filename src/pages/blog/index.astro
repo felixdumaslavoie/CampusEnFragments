@@ -5,12 +5,12 @@ import H1 from "../../components/h1.astro";
 import { formatDate } from "../../lib/utils";
 import InfoLayout from "../../layouts/InfoLayout.astro";
 
-const categoriesResult = await Astro.callAction(actions.categories.getCategories, null);
+/*const categoriesResult = await Astro.callAction(actions.categories.getCategories, null);
 const categories = categoriesResult?.data?.categories || [];
 
 const selectedCategory = Astro.url.searchParams.get("category") || "all";
 
-const articlesResult = await Astro.callAction(actions.categories.filterByCategory, {
+/*const articlesResult = await Astro.callAction(actions.categories.filterByCategory, {
     category: selectedCategory,
 });
 
@@ -18,7 +18,7 @@ if (articlesResult?.error) {
     console.log("error", articlesResult.error);
 }
 
-const articles = articlesResult?.data?.articles || [];
+const articles = articlesResult?.data?.articles || [];*/
 ---
 
 <InfoLayout>
@@ -27,14 +27,12 @@ const articles = articlesResult?.data?.articles || [];
 
         <ul class="mt-4 flex items-center gap-4">
             <li>
-                <a href="/blog" class={clsx("w-fit px-4 py-1 text-sm bg-transparent rounded-full transition-all duration-300 ease-in-out",
-                    selectedCategory === "all" ? "text-white bg-zinc-100/20 outline-2 outline-offset-2 outline-zinc-100/20" : "text-zinc-400 hover:text-zinc-300"
-                )}>
+                <a href="/blog" class="">
                     All
                 </a>
             </li>
 
-            {
+            {/* 
                 categories.map((category) => (
                     <li>
                         <a
@@ -47,12 +45,12 @@ const articles = articlesResult?.data?.articles || [];
                         </a>
                     </li>
                 ))
-            }
+            */}
         </ul>
 
         <ul class="mt-4 space-y-6">
             {
-                articles.map((article) => (
+                /*articles.map((article) => (
                     <li>
                         <a
                             class="space-y-1 group"
@@ -70,7 +68,7 @@ const articles = articlesResult?.data?.articles || [];
                             </p>
                         </a>
                     </li>
-                ))
+                )) */
             }
         </ul>
     </div>
