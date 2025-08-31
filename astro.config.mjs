@@ -25,5 +25,5 @@ export default defineConfig({
       fallbacks: ["Inter", "sans-serif"],
     }]
   },
-  site: 'https://cinefragments.ta.ws',
+  site: 'https://felixdumaslavoie.github.io/campus-en-fragments',
 });
