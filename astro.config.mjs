@@ -6,7 +6,10 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-   output: 'static',
+  output: 'static',
+  build: {
+    format: "directory",
+  },
   vite: {
     plugins: [tailwindcss()]
   },
@@ -21,5 +24,5 @@ export default defineConfig({
       fallbacks: ["Inter", "sans-serif"],
     }]
   },
-  site: 'https://felixdumaslavoie.github.io',
+  site: 'https://felixdumaslavoie.github.io/CampusEnFragments',
 });
