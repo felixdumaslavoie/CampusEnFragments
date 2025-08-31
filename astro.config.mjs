@@ -21,6 +21,5 @@ export default defineConfig({
       fallbacks: ["Inter", "sans-serif"],
     }]
   },
- 
-  
+  site: 'https://felixdumaslavoie.github.io',
 });
